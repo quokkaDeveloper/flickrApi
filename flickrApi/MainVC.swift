@@ -13,19 +13,40 @@ import Kingfisher
 class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var testImage: UIImageView!
-    @IBOutlet weak var toalNumber: UILabel!
     @IBOutlet weak var searchText: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var totalNum: UILabel!
+    
+    var page = 1
+    var perPage = 15
     var photoUrl = [String]()
     var photoTitle = [String]()
-//    let testString = ["https://farm66.staticflickr.com/65535/49766434666_ba99c8c3f5.jpg", "https://farm66.staticflickr.com/65535/49766434666_ba99c8c3f5.jpg"]
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
-
+    //infinite scroll
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+         let offsetY = scrollView.contentOffset.y
+         let contentHeight = scrollView.contentSize.height
+        
+         if offsetY > contentHeight - scrollView.frame.size.height  {
+                 page += 1
+                 callData()
+             }
+         }
+    
+    @IBAction func scrollUp(_ sender: Any) {
+        collectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+    
+    @IBAction func scrollDown(_ sender: Any) {
+        collectionView.setContentOffset(CGPoint(x: 0, y: collectionView.contentSize.height-collectionView.bounds.height), animated: true)
+    }
+ 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             //이미지 카운터 하는 함수
         return photoUrl.count
@@ -62,37 +83,39 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
             return 1
         }
     
-    
-    // https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=127486bde7272f95e36489f787794c58&format=json&text=rabbit
-    @IBAction func callPhoto(_ sender: Any) {
+    @IBAction func search(_ sender: Any) {
         print("Callphotos")
+        photoUrl = [String]()
+        photoTitle = [String]()
+        page = 1
+        callData()
+        }
+    
+    func callData() {
         let req = Req()
+        
         let text = searchText.text!
         let url = URL(string: req.baseUrl)
         let param = ["method": req.method, "api_key": req.apikey,"format": req.format, "text" : text
-            , "nojsoncallback" : req.nojsoncallback] as [String : Any]
-                print(param)
-                
+            , "nojsoncallback" : req.nojsoncallback, "page" : page , "per_page": perPage] as [String : Any]
                 _ = Alamofire.request(url!, method: .post, parameters: param ).responseString {
                     response in
                     let decoder = JSONDecoder()
                     let jsonString = response.result.value!
                     let data = jsonString.data(using: .utf8)
                     if let data = data, let flickr = try? decoder.decode(Flickr.self, from: data) {
-                        
                         for photo in flickr.photos.photo {
-                            print(photo.title)
                             self.photoUrl.append("https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg")
                             self.photoTitle.append(photo.title)
                         }
-                        print(self.photoUrl)
+                        self.totalNum.text = String(self.photoUrl.count)
                         self.collectionView.reloadData()
                     }
                     else {
                         print("fail")
                     }
                 }
-        }
+    }
 }
 
 class CustomCell: UICollectionViewCell {
