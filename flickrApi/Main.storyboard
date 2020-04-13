@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-854" y="143"/>
         </scene>
-        <!--Flickr Image호출-->
+        <!--Flickr-->
         <scene sceneID="01S-WJ-L51">
             <objects>
                 <viewController id="f8U-jY-NDU" customClass="MainVC" customModule="flickrApi" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,10 +42,6 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="ccE-C7-v6e">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="695"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RowCell" id="2Au-YH-qlG" customClass="CustomCell" customModule="flickrApi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -66,26 +62,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oh-ha-cUd" userLabel="UpButton">
-                                <rect key="frame" x="374" y="96" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="up-arrow">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="scrollUp:" destination="f8U-jY-NDU" eventType="touchUpInside" id="tBo-nG-gAU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-mZ-sLK" userLabel="DownButton">
-                                <rect key="frame" x="374" y="134" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="down-arrow">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="scrollDown:" destination="f8U-jY-NDU" eventType="touchUpInside" id="pYg-wN-5do"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-Rs-JkU">
                                 <rect key="frame" x="127" y="113" width="178" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -114,13 +90,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIN-Mx-xb8">
+                                <rect key="frame" x="370" y="95" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="선택"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y94-4K-TmZ">
+                                <rect key="frame" x="370" y="129" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="저장"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oh-ha-cUd" userLabel="UpButton">
+                                <rect key="frame" x="384" y="414" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="up-arrow">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="scrollUp:" destination="f8U-jY-NDU" eventType="touchUpInside" id="tBo-nG-gAU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-mZ-sLK" userLabel="DownButton">
+                                <rect key="frame" x="384" y="452" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="down-arrow">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="scrollDown:" destination="f8U-jY-NDU" eventType="touchUpInside" id="pYg-wN-5do"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MLb-OE-Jht"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Flickr Image호출" id="ULe-RK-2oy"/>
+                    <navigationItem key="navigationItem" title="Flickr" id="ULe-RK-2oy">
+                        <barButtonItem key="rightBarButtonItem" title="내 사진" id="82k-hd-7pB"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="ccE-C7-v6e" id="jlS-cu-kYj"/>
                         <outlet property="collectionView" destination="yMk-9s-HEp" id="y6E-08-qCJ"/>
                         <outlet property="searchText" destination="hjT-Rs-JkU" id="ihK-8d-sBG"/>
                         <outlet property="totalNum" destination="idC-J4-nKD" id="0Mt-g0-a97"/>
@@ -135,16 +142,18 @@
             <objects>
                 <viewController storyboardIdentifier="DetailVC" title="DetailVC" id="KnL-Pi-Xrx" customClass="DetailVC" customModule="flickrApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZKM-jZ-UVu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yhy-KP-AuQ">
-                                <rect key="frame" x="26" y="198.5" width="360" height="368.5"/>
+                                <rect key="frame" x="26" y="198" width="360" height="281"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8l-jM-1of">
-                                <rect key="frame" x="26" y="147" width="360" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8l-jM-1of">
+                                <rect key="frame" x="26" y="109" width="360" height="64"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="1iT-eL-l1g"/>
+                                    <constraint firstAttribute="height" constant="64" id="TcE-4T-ADc"/>
                                     <constraint firstAttribute="width" constant="360" id="kPT-PX-jFe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -155,15 +164,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="O8l-jM-1of" firstAttribute="leading" secondItem="Xhy-i6-dEM" secondAttribute="leading" constant="26" id="0QB-62-xUE"/>
+                            <constraint firstItem="O8l-jM-1of" firstAttribute="top" secondItem="Xhy-i6-dEM" secondAttribute="top" constant="109" id="5xO-bO-yLp"/>
                             <constraint firstItem="Xhy-i6-dEM" firstAttribute="bottom" secondItem="Yhy-KP-AuQ" secondAttribute="bottom" constant="295" id="BS0-t4-4BW"/>
                             <constraint firstItem="Xhy-i6-dEM" firstAttribute="trailing" secondItem="O8l-jM-1of" secondAttribute="trailing" constant="28" id="D1m-B1-0Ss"/>
                             <constraint firstItem="Yhy-KP-AuQ" firstAttribute="leading" secondItem="Xhy-i6-dEM" secondAttribute="leading" constant="26" id="HWa-bK-rhC"/>
                             <constraint firstItem="Xhy-i6-dEM" firstAttribute="trailing" secondItem="Yhy-KP-AuQ" secondAttribute="trailing" constant="28" id="JNM-Yl-2N1"/>
-                            <constraint firstItem="O8l-jM-1of" firstAttribute="top" secondItem="Xhy-i6-dEM" secondAttribute="top" constant="103" id="K0F-gU-HOt"/>
                             <constraint firstItem="Yhy-KP-AuQ" firstAttribute="top" secondItem="O8l-jM-1of" secondAttribute="bottom" constant="25" id="TdL-2i-Kya"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xhy-i6-dEM"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="image" destination="Yhy-KP-AuQ" id="U3o-Ck-x05"/>
                         <outlet property="photoTitle" destination="O8l-jM-1of" id="Wgr-NA-rgf"/>

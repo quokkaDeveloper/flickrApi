@@ -14,7 +14,6 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchText: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var totalNum: UILabel!
     
@@ -59,10 +58,14 @@ class MainVC: UIViewController, UICollectionViewDelegate,UICollectionViewDataSou
             cell.image.kf.setImage(with: url)
             return cell
         }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
         vc?.name = photoTitle[indexPath.row]
         vc?.photoUrl = photoUrl[indexPath.row]
+        vc?.photoTitleTotal = photoTitle
+        vc?.photoUrlTotal = photoUrl
+        vc?.photoIndex = indexPath.row
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
