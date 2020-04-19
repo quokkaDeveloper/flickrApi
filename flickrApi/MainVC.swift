@@ -19,7 +19,7 @@ class MainVC: UIViewController {
     var photoArray = [UIImage]()
     
     var page = 1
-    var perPage = 30
+    var perPage = 15
     var photoUrl = [String]()
     
     var text = ""
