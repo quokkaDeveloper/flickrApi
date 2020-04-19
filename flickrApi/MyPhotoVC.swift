@@ -97,6 +97,7 @@ class MyPhotoVC : UIViewController {
         self.collectionView.reloadData()
       dictionarySelectedIndexPath.removeAll()
       mMode = mMode == .view ? .select : .view
+        totalNum.text = String(urlArray.count)
     }
     
     func configureData() {

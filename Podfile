@@ -4,7 +4,7 @@
 target 'flickrApi' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-#  use_modular_headers
+#  use_modular_headers!
 
   # Pods for flickrApi
 	pod 'Alamofire', '~> 4.8.2'

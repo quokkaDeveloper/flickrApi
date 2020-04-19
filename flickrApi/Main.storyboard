@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GwR-uZ-JSY">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <navigationController id="GwR-uZ-JSY" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k8k-84-w0B">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,11 +28,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyPhotoVC" title="MyPhoto" id="2PG-vv-EwT" customClass="MyPhotoVC" customModule="flickrApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jzv-7e-S9I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lau-6l-gzk">
-                                <rect key="frame" x="0.0" y="79" width="320" height="357"/>
+                                <rect key="frame" x="0.0" y="79" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oXR-cD-1Qv">
                                     <size key="itemSize" width="128" height="128"/>
@@ -90,11 +90,11 @@
             <objects>
                 <viewController id="f8U-jY-NDU" customClass="MainVC" customModule="flickrApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ltl-bu-mIr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-9s-HEp">
-                                <rect key="frame" x="0.0" y="123" width="320" height="357"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="raR-ld-aJE">
                                     <size key="itemSize" width="128" height="128"/>
@@ -105,7 +105,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhF-MO-sLz">
-                                <rect key="frame" x="253" y="69" width="52" height="30"/>
+                                <rect key="frame" x="347" y="113" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="At1-Z9-9by"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2h-OZ-tpo">
-                                <rect key="frame" x="7" y="76" width="48" height="21"/>
+                                <rect key="frame" x="7" y="120" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Hue-oE-YGn"/>
                                 </constraints>
@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idC-J4-nKD">
-                                <rect key="frame" x="63" y="76" width="48" height="21"/>
+                                <rect key="frame" x="63" y="120" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="qy3-nA-FOa"/>
                                 </constraints>
@@ -133,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oh-ha-cUd" userLabel="UpButton">
-                                <rect key="frame" x="290" y="268.5" width="30" height="30"/>
+                                <rect key="frame" x="384" y="481.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="B4u-as-Dkr"/>
                                     <constraint firstAttribute="height" constant="30" id="NC1-Do-Xiw"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-mZ-sLK" userLabel="DownButton">
-                                <rect key="frame" x="290" y="304.5" width="30" height="30"/>
+                                <rect key="frame" x="384" y="517.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="OW1-T7-Bxe"/>
                                     <constraint firstAttribute="height" constant="30" id="vzY-Nr-TOu"/>
@@ -159,7 +159,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-Rs-JkU">
-                                <rect key="frame" x="119" y="69" width="126" height="34"/>
+                                <rect key="frame" x="119" y="113" width="220" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
@@ -201,36 +201,32 @@
         <scene sceneID="rzU-u7-rzV">
             <objects>
                 <viewController storyboardIdentifier="DetailVC" title="DetailVC" id="hz6-B8-Qgo" customClass="DetailVC" customModule="flickrApi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="PxT-tO-WeQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                    <view key="view" contentMode="scaleToFill" id="PxT-tO-WeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpP-kP-Mvl">
-                                <rect key="frame" x="0.0" y="20" width="320" height="416"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LG7-BA-0Ra">
+                                <rect key="frame" x="0.0" y="10" width="414" height="754"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XMT-pR-U8Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="XMT-pR-U8Z" firstAttribute="trailing" secondItem="IeK-Wg-Ivh" secondAttribute="trailing" id="GTv-LL-UL5"/>
-                                    <constraint firstItem="XMT-pR-U8Z" firstAttribute="bottom" secondItem="IeK-Wg-Ivh" secondAttribute="bottom" id="J6j-Gk-9aN"/>
-                                    <constraint firstItem="XMT-pR-U8Z" firstAttribute="leading" secondItem="IeK-Wg-Ivh" secondAttribute="leading" id="OoG-kV-Mmf"/>
-                                    <constraint firstAttribute="trailing" secondItem="XMT-pR-U8Z" secondAttribute="trailing" id="TZw-Vl-9Xx"/>
-                                    <constraint firstAttribute="width" constant="414" id="exX-2i-K6c"/>
-                                    <constraint firstAttribute="bottom" secondItem="XMT-pR-U8Z" secondAttribute="bottom" constant="3" id="ms1-di-r6G"/>
-                                    <constraint firstItem="XMT-pR-U8Z" firstAttribute="top" secondItem="IeK-Wg-Ivh" secondAttribute="top" id="pqX-mH-RM5"/>
+                                    <constraint firstAttribute="bottom" secondItem="XMT-pR-U8Z" secondAttribute="bottom" id="QkN-hb-Kwh"/>
+                                    <constraint firstAttribute="trailing" secondItem="XMT-pR-U8Z" secondAttribute="trailing" id="c7h-yC-oq6"/>
+                                    <constraint firstItem="XMT-pR-U8Z" firstAttribute="leading" secondItem="LG7-BA-0Ra" secondAttribute="leading" id="kg2-FB-Xyd"/>
+                                    <constraint firstItem="XMT-pR-U8Z" firstAttribute="top" secondItem="LG7-BA-0Ra" secondAttribute="top" id="lsK-xa-5NR"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="n1r-Tg-lQz"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="IeK-Wg-Ivh"/>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="UpP-kP-Mvl" firstAttribute="bottom" secondItem="ey1-wu-kOc" secondAttribute="bottom" id="10n-2c-J0W"/>
-                            <constraint firstItem="UpP-kP-Mvl" firstAttribute="trailing" secondItem="ey1-wu-kOc" secondAttribute="trailing" id="HEN-0r-mBs"/>
-                            <constraint firstItem="UpP-kP-Mvl" firstAttribute="top" secondItem="ey1-wu-kOc" secondAttribute="top" constant="20" id="lpj-O4-7jU"/>
-                            <constraint firstItem="UpP-kP-Mvl" firstAttribute="leading" secondItem="ey1-wu-kOc" secondAttribute="leading" id="m1w-ML-Ggx"/>
+                            <constraint firstItem="LG7-BA-0Ra" firstAttribute="top" secondItem="ey1-wu-kOc" secondAttribute="top" constant="10" id="PN5-vH-5eP"/>
+                            <constraint firstItem="LG7-BA-0Ra" firstAttribute="leading" secondItem="ey1-wu-kOc" secondAttribute="leading" id="a5W-aO-6Em"/>
+                            <constraint firstItem="LG7-BA-0Ra" firstAttribute="trailing" secondItem="ey1-wu-kOc" secondAttribute="trailing" id="caN-Rv-FN8"/>
+                            <constraint firstItem="ey1-wu-kOc" firstAttribute="bottom" secondItem="LG7-BA-0Ra" secondAttribute="bottom" constant="10" id="uMK-dj-p91"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ey1-wu-kOc"/>
                     </view>

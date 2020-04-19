@@ -140,6 +140,7 @@ class MainVC: UIViewController {
                             self.photoUrl.append("https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg")
                         }
                         self.totalNum.text = String(self.photoUrl.count)
+                        print(self.photoUrl)
                         self.collectionView.reloadData()
                     }
                     else {
